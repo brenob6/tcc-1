@@ -1,0 +1,144 @@
+\chapter[Fundamentação Teórica]{Fundamentação Teórica}
+
+\section{Blockchain}
+
+Uma blockchain é uma rede \textit{p2p} que compartilha um livro-razão
+(ledger) imutável, atualizável apenas por meio de consenso ou acordo
+entre os nós participantes da rede \cite{MasteringBlockchain}. Em suma,
+uma blockchain é um banco de dados distribuído que armazena um conjunto de
+transações, imutáveis (não podem ser alteradas ou apagadas) e que apenas
+são adicionadas quando há quórum entre os participantes da rede.
+
+A tecnologia foi proposta por Satoshi Nakamoto em seu artigo Bitcoin:
+A Peer-to-Peer Electronic Cash System, como uma solução criar um
+sistema de pagamentos on-line que não dependa de intermediários
+financeiros para validar transações \cite{Bitcoin}.
+
+Essas características fazem das blockchains uma tecnologia ideal para
+aplicações que exigem transparência, segurança e descentralização, como
+sistemas financeiros, cadeias de suprimentos, votação eletrônica, entre
+outros.
+
+\subsection{Mecanismos de consenso}
+
+O conjunto de regras e procedimentos que permitem que os nós de uma
+rede cheguem a um acordo sobre o estado atual do livro-razão é
+conhecido como mecanismo de consenso. \cite{MasteringBlockchain}.
+
+Existem diversos mecanimos de consenso, cada qual com suas vantagens
+e desvantagens.
+
+Dentre os mais conhecidos, destacam-se:
+
+\subsubsection{Prova de Trabalho (Proof of Work - PoW)}
+
+Como o nome sugere, o mecanismo de Prova de Trabalho (PoW) exige que os
+nós participantes da rede realizem um trabalho computacional para validar
+transações e adicionar novos blocos à rede.
+
+No Bitcoin, o trabalho consiste em encontrar um valor chamado nonce
+que, ao ser combinado com os dados de um conjuto de transações
+(bloco) e processado pela função
+hash SHA-256, produza um hash que satisfaça a seguinte condição:
+
+$$
+hash < target
+$$
+
+Onde $hash$ é o resultado do algortimo SHA-256 aplicado ao bloco e
+$target$ é um valor númerico definido pela rede que determina a
+dificuldade do problema.
+\cite{EthereumWhitepaper}
+
+Ao resolver o problema, o bloco é enviado para os demais nós da rede.
+Cada nós valida o bloco e o adiciona à sua cópia do livro-razão, caso
+o bloco seja considerado válido. O nó que resolver o problema
+primeiro é recompensado com uma quantia da criptomoeda da rede, além
+das taxas de transação associadas ao bloco.
+
+O mecanismo de PoW é um mecânismo robusto e seguro, pois é inviável
+econômicamente para um nó malicioso atacar a rede, uma vez que,
+exigiria um alto poder computacional para superar capacidade de
+processamento da rede.
+Além disso, seria mais rentável para o nó malicioso participar
+honestamente da rede
+do que tentar atacá-la.
+
+Entretanto, o PoW é criticado por seu alto consumo energético, uma vez
+que a resolução dos problemas computacionais exige um grande poder
+de processamento, o que leva a um consumo elevado de energia elétrica.
+\cite{BitcoinEnergyConsumption}
+
+\subsubsection{Prova de Participação (Proof of Stake - PoS)}
+
+Em uma rede que utiliza o mecanismo de Prova de Particiapação (PoS),
+os nós validadores
+precisam depositar uma quantia da criptpmoeda da rede como garantia
+(\textit{stake})
+para participar do processo de validação. Caso o nó atue de forma
+maliciosa, o valor depositado
+é perdido. \cite{ethereum-docs}
+
+Apesar de ser um mecanismo mais eficiente em termos energéticos do que o PoW,
+o PoS apresenta desafios relacionados à segurança e à centralização,
+uma vez que nós com grandes quantias de criptomoeda podem ter mais
+influência na validação de blocos.
+
+\subsubsection{Prova de Autoridade (Proof of Authority - PoA)}
+
+A prova de autoridade é um mecanismo de consenso mais centralizado,
+neste, um conjunto de nós confiáveis é
+pré-selecionado para validar transações e criar novos blocos. Esses
+nós são conhecidos como validadores
+ou autoridades, e sua identidade é conhecida e confiável pela rede.
+\cite{ethereum-docs}
+
+\section{Criptografia}
+
+A criptografia é frequentemente utilizada em muitos aspectos da
+computação moderna. Ela é usada para enviar
+mensagens de forma segura através de uma rede, bem como para proteger
+dados de banco de dados,
+arquivos e até mesmo discos inteiros contra a leitura de seu conteúdo
+por entidades não autorizadas.
+\cite{OperatingSystemsConcepts}
+
+Um algoritmo de criptografia deve possuir duas funções principais:
+
+\begin{itemize}
+  \item Função criptográfica: $E_k(m) = c$, que dado uma mensagem $m$
+    e uma chave $k$, produza um texto cifrado $c$.
+  \item Função de descriptografia: $D_k(c) = m$, que dado um texto
+    cifrado $c$ e uma chave $k$, produza a mensagem original $m$.
+\end{itemize}
+
+A chave $k$ não necessariamente precisa ser a mesma para as funções
+de criptografia $E$ e de descriptografia $D$. Essa característica é
+base para a classificação dos algoritmos de criptografia em dois
+tipos: criptografia de chave simétrica e criptografia de chave assimétrica.
+
+\subsection {Criptografia de chave assimétrica}
+
+\subsection{Critografia de chave simétrica}
+
+\section{Funções hash}
+
+\section{Lei Geral de Proteção de Dados Pessoais (LGPD)}
+
+A Lei Geral de Proteção de dados Pessoais (LGPD) dispõe sobre o
+tratamento de dados pessoais, com o objetivo de proteger os direitos
+fundamentais de liberdade e de privacidade e o livre desenvolvimento
+da personalidade da pessoa natural. \cite{LGPD}
+
+Uma das principais implicações da LGPD para o segmento da saúde se
+refere à forma como a coleta,
+o armazenamento e todo o tratamento de dados serão empregados. A lei
+exige o consentimento do paciente para
+uso de seus dados pessoais para uma finalidade determinada.
+\cite{LGPD-Saude}.
+
+Ainda assim existe a possibilidade de tratamento de dados pessoais
+sem o consentimento do paciente, desde que seja para finalidades
+específicas, como cumprimento de obrigação legal ou regulatória,
+execução de políticas públicas, realização de estudos por órgão de
+pesquisa, entre outros. \cite{LGPD-Saude}.

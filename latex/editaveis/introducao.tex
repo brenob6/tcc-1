@@ -1,9 +1,17 @@
 \chapter*[Introdução]{Introdução}
 \addcontentsline{toc}{chapter}{Introdução}
 
-Este documento apresenta considerações gerais e preliminares relacionadas 
-à redação de relatórios de Projeto de Graduação da Faculdade UnB Gama 
-(FGA). São abordados os diferentes aspectos sobre a estrutura do trabalho, 
-uso de programas de auxilio a edição, tiragem de cópias, encadernação, etc.
+O presente trabalho tem como objetivo propor uma arquitetura baseada em blockchain para o gerenciamento
+de permissões de acesso a prontuários eletrônicos de pacientes. A proposta busca permitir o compartilhamento
+de informações médicas entre diferentes instituições de saúde de forma segura e auditável, respeitando os princípios
+estabelecidos pela Lei Geral de Proteção de Dados (LGPD).
 
-Este template é uma adaptação do ABNTeX2\footnote{\url{https://github.com/abntex/abntex2/}}.
+Nesse contexto, considera-se que os dados de prontuários não podem ser distribuídos entre hospitais sem o consentimento
+do paciente, uma vez que se tratam de dados pessoais sensíveis. Assim, o sistema proposto utiliza contratos inteligentes
+para registrar e gerenciar o consentimento do titular dos dados, permitindo que o paciente autorize ou restrinja o
+acesso às suas informações médicas.
+
+Adicionalmente, o modelo também contempla situações excepcionais previstas em contextos clínicos, como emergências médicas,
+nas quais o acesso aos dados pode ser necessário mesmo na ausência de autorização prévia do paciente.
+Dessa forma, a arquitetura busca equilibrar a proteção da privacidade, a conformidade com a legislação
+vigente e a disponibilidade de informações essenciais para o atendimento em saúde.
