@@ -1,5 +1,14 @@
-FROM debian:buster-slim
+FROM debian:bookworm-slim
 
-RUN apt-get update && apt-get install -y ghostscript texlive-publishers texlive-lang-portuguese texlive-latex-extra texlive-fonts-recommended make
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Instala pacotes necessários para compilar LaTeX sem ficar caçando .sty
+RUN apt-get update && apt-get install -y --no-install-recommends \
+		texlive-full \
+    ghostscript \
+    make \
+    ca-certificates \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home/latex
+
